@@ -1,0 +1,3 @@
+didalam pembuatan sass / scss ini. pembuatan tidak dilakukan dengan extenxsion vscode, aplikasi sass,
+atau dengan npm, melainkan menggunakan compiler online sass yang bertujuan untuk mengcompile hasil 
+code yang dibuat sass/scss aggar menjadi css. 

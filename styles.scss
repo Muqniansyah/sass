@@ -1,0 +1,15 @@
+$padding: 6px;
+$myColor: salmon;
+
+header {
+  background-color: aqua;
+  h1 {
+    margin: 0;
+    padding: $padding;
+    color: blue;
+    font-size: 3rem;
+  }
+  p {
+    color: $myColor;
+  }
+}

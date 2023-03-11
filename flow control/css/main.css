@@ -1,0 +1,133 @@
+/* if */
+.teks {
+  width: 20px;
+  height: 20px;
+  color: red;
+}
+
+/* else */
+.kotak {
+  background-color: #999;
+  color: #ddd;
+}
+
+/* else if */
+.right {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-left-color: black;
+}
+
+/* for */
+.gradient {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gradient li:nth-child(1) {
+  padding: 4px;
+  background-color: #fa897c;
+}
+.gradient li:nth-child(2) {
+  padding: 4px;
+  background-color: #fb9286;
+}
+.gradient li:nth-child(3) {
+  padding: 4px;
+  background-color: #fb9b90;
+}
+.gradient li:nth-child(4) {
+  padding: 4px;
+  background-color: #fba399;
+}
+.gradient li:nth-child(5) {
+  padding: 4px;
+  background-color: #fcaca3;
+}
+.gradient li:nth-child(6) {
+  padding: 4px;
+  background-color: #fcb5ad;
+}
+.gradient li:nth-child(7) {
+  padding: 4px;
+  background-color: #fcbeb7;
+}
+.gradient li:nth-child(8) {
+  padding: 4px;
+  background-color: #fdc7c1;
+}
+.gradient li:nth-child(9) {
+  padding: 4px;
+  background-color: #fdd0cb;
+}
+.gradient li:nth-child(10) {
+  padding: 4px;
+  background-color: #fdd9d5;
+}
+
+/* while */
+.warna {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.warna li:nth-child(1) {
+  padding: 4px;
+  background-color: #0a0aff;
+}
+.warna li:nth-child(2) {
+  padding: 4px;
+  background-color: #1414ff;
+}
+.warna li:nth-child(3) {
+  padding: 4px;
+  background-color: #1f1fff;
+}
+.warna li:nth-child(4) {
+  padding: 4px;
+  background-color: #2929ff;
+}
+.warna li:nth-child(5) {
+  padding: 4px;
+  background-color: #33f;
+}
+.warna li:nth-child(6) {
+  padding: 4px;
+  background-color: #3d3dff;
+}
+.warna li:nth-child(7) {
+  padding: 4px;
+  background-color: #4747ff;
+}
+.warna li:nth-child(8) {
+  padding: 4px;
+  background-color: #5252ff;
+}
+.warna li:nth-child(9) {
+  padding: 4px;
+  background-color: #5c5cff;
+}
+.warna li:nth-child(10) {
+  padding: 4px;
+  background-color: #66f;
+}
+
+/* each */
+.socials {
+  font-size: 2em;
+  font-family: arial;
+  font-weight: bold;
+}
+.socials .youtube {
+  color: #ff0000;
+}
+.socials .facebook {
+  color: #3b5988;
+}
+.socials .twitter {
+  color: #1da1f2;
+}

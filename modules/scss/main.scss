@@ -1,0 +1,41 @@
+// ada 2 keywoard yang digunakan untuk menerapkan modules yaitu @import dan @use. perbedaannya @import adalah keywoard sass yang terlama dan @use adalah penggunaan keywoard yang terbaru.
+
+// contoh penggunaan @import
+// @import "mixin";
+
+.header ul {
+  @include inline-list();
+  li {
+    background-color: black;
+    a {
+      color: white;
+    }
+  }
+}
+
+.footer ul {
+  @include inline-list();
+  li {
+    background-color: salmon;
+    a {
+      color: white;
+    }
+  }
+}
+
+.container {
+  @include flex-box(row-reverse, space-around);
+  width: 600px;
+  height: 400px;
+  background-color: #eaeaea;
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: #bada65;
+    text-align: center;
+    line-height: 60px;
+  }
+}
+
+// dan penggunaan @use harus dowload versi DART-SASS nya yang terinstall didalam komputer kita. karna jika gunakan extension vscode itu merupakan versi LIP-SASS.
+// cara downloadnya bisa kunjungi website SASS nya. dan disitu ada caranya,salah satunya dengan memakai npm,brew atau dari dowload packagenya dari github sassnya. setelah itu tambahkan alamat SASS nya ke path di komputer atau windows kita.

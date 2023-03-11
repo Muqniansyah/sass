@@ -1,0 +1,35 @@
+/* hasil compile scss */
+.main {
+  background-color: lightblue;
+}
+.main .main-heading {
+  font-size: 2em;
+}
+.main .main-paragraph {
+  font-size: 1.4em;
+}
+
+/* hasil compile scss yang kedua */
+.main h1,
+footer h1,
+.main p,
+footer p {
+  letter-spacing: 1px;
+}
+
+/* hasil compile scss yang ketiga */
+.container .main {
+  width: 20rem;
+}
+.main .main-heading {
+  color: red;
+}
+.main:hover {
+  background-color: pink;
+}
+.main .main-paragraph {
+  background-color: orange;
+}
+.main-tulisan {
+  background-color: yellow;
+}

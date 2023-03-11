@@ -1,0 +1,67 @@
+// CSS Variabel
+:root {
+  --primary-color: #f4f134;
+  --secondery-color: #f5f;
+}
+
+body {
+  // cara pakai CSS variabel
+  background-color: var(--primary-color);
+}
+
+// SASS Variabel
+// contoh 2 variabel ini adalah contoh dari variabel global
+$textcolor-primary: aqua;
+$textcolor-secondary: red;
+
+.header h1 {
+  // cara pakai SASS variabel
+  color: $textcolor-primary;
+}
+
+.header p {
+  // SASS menganggap sama ketika memakai dash(-) atau underscore(_). contoh :
+  color: $textcolor_secondary;
+}
+
+.content {
+  // 1 variabel ini adalah contoh dari variabel lokal
+  //cakupannya yang bisa terkena perubahan yaitu elemen dari class content beserta turunannya atau elemen yg ada didalam class content(jika diberikan nesting saja pada SASSnya).
+  $textcolor-third: brown;
+  color: $textcolor-third;
+  h2 {
+    color: $textcolor-third;
+  }
+  p {
+    color: $textcolor-third;
+  }
+}
+
+.cerita {
+  // cara merubah variabel lokal menjadi global. contoh :
+  $background-third: orange !global;
+  $background-four: green !global;
+
+  h2 {
+    background-color: $background-third;
+  }
+}
+
+.cerita p {
+  background-color: $background-four;
+  // contoh jika penamaan variabel yang dilokal sama dengan variabel global maka dia akan mengambil variabel lokalnya dan tidak terpengaruh dengan globalnya. contoh :
+  $textcolor-primary: rgb(255, 163, 232);
+  color: $textcolor-primary;
+}
+
+// map adalah fitur dalam variabel SASS untuk menyimpan beberapa nilai kedalam sebuah variabel
+$alert: (
+  "danger": red,
+  "success": green,
+  "warning": orange,
+);
+
+.map {
+  // cara pakai mapnya
+  color: map-get($alert, "danger");
+}

@@ -1,0 +1,46 @@
+// contoh dari nesting
+.main {
+  background-color: lightblue;
+
+  .main-heading {
+    font-size: 2em;
+  }
+
+  .main-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+// contoh kedua nesting
+// cara baca: ambil class main dan footer yang didalamnya ada h1 dan p
+.main,
+footer {
+  h1,
+  p {
+    letter-spacing: 1px;
+  }
+}
+
+//contoh ketiga nesting : character '&' atau disebutnya parent selector
+.main {
+  .container & {
+    // artinya class container yang berada diatas class main ganti widthnya 20rem
+    width: 20rem;
+  }
+  .main-heading {
+    color: red;
+  }
+  //parent selector bisa digunakan untuk menambahkan pseudo class. contoh :
+  &:hover {
+    // artinya ketika class main disorot maka background color berganti warna pink
+    background-color: pink;
+  }
+  //parent selector juga bisa digunakan untuk megenerate otomatis nama dari parent selectornya. contoh :
+  & &-paragraph {
+    background-color: orange;
+  }
+  // teknik interpolasi
+  #{&}-tulisan {
+    background-color: yellow;
+  }
+}

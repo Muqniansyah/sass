@@ -1,0 +1,35 @@
+/* CSS Variabel */
+:root {
+  --primary-color: #f4f134;
+  --secondery-color: #f5f;
+}
+body {
+  background-color: var(--primary-color);
+}
+
+/* SASS Variabel */
+.header h1 {
+  color: aqua;
+}
+.header p {
+  color: red;
+}
+.content {
+  color: brown;
+}
+.content h2 {
+  color: brown;
+}
+.content p {
+  color: brown;
+}
+.cerita h2 {
+  background-color: orange;
+}
+.cerita p {
+  background-color: green;
+  color: #ffa3e8;
+}
+.map {
+  color: red;
+}

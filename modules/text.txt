@@ -1,0 +1,3 @@
+di latihan modules ini modules gagal terpanggil dikarenakan memakai compiler sass online tidak 
+memakai extension sass divscode, maka dari itu fitur @import tidak bisa digunakan/terpakai karena 
+tidak adanya live compiler yang bisa mengcompile secara otomatis.

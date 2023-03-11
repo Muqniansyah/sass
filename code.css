@@ -1,0 +1,12 @@
+﻿header {
+  background-color: aqua;
+}
+header h1 {
+  margin: 0;
+  padding: 6px;
+  color: blue;
+  font-size: 3rem;
+}
+header p {
+  color: salmon;
+}

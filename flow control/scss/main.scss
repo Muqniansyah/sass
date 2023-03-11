@@ -1,0 +1,119 @@
+// keywoard yang digunakan dalam flow-control yaitu :
+// @if, @else, @else if (untuk pengkondisian/percabangan)
+// @for, @while, @each (untuk perulangan/looping)
+
+// if
+@mixin teks($size) {
+  width: $size;
+  height: $size;
+  @if $size == 20px {
+    color: red;
+  }
+}
+
+.teks {
+  @include teks(20px);
+}
+
+// else
+$light-bg: #eaeaea;
+$light-text: #333;
+$dark-bg: #999;
+$dark-text: #ddd;
+
+@mixin color-mode($light-mode: true) {
+  @if $light-mode {
+    background-color: $light-bg;
+    color: $light-text;
+  } @else {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+}
+
+.kotak {
+  @include color-mode($light-mode: false);
+}
+
+// else if
+@mixin segitiga($size, $color, $direction) {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size / 2;
+  @if $direction == up {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == down {
+    border-top-color: $color;
+  } @else {
+    border-right-color: $color;
+  }
+}
+
+.right {
+  @include segitiga(2em, black, right);
+}
+
+// for
+$color: salmon;
+
+.gradient {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  //  $i sebagai iterator atau pengulangannya
+  // from 1 to 10, artinya pengulangan dimulai dari 1 hingga 10
+  // jika untuk css, elemen dimulai dari 1(satu) bukan 0(nol).
+  @for $i from 1 to 11 {
+    // #{$i} adalah teknik interpolasi untuk mengambil sesuai dengan variabel i atau sesuai iterator pengulangannya.
+    li:nth-child(#{$i}) {
+      padding: 4px;
+      // lighten adalah sebuah function sass untuk mengelola warna.
+      background-color: lighten($color, $i * 2%);
+      // penjelasan amount : $i * 2% yaitu elemen pertama akan satu nilainya dikali 2% dan elemen kedua akan dikali 2X2 persen lagi atau 4% dan begitu seterusnya.
+    }
+  }
+}
+
+// while
+$color: blue;
+
+.warna {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  // $i: 1 ; adalah nilai awalnya
+  $i: 1;
+  // yang ada disebelah while hanya kondisi terminasi pengulangannya
+  @while $i < 11 {
+    li:nth-child(#{$i}) {
+      padding: 4px;
+      background-color: lighten($color, $i * 2%);
+    }
+    // proses increment
+    $i: $i + 1;
+    // arti: setelah selesai pengulangannya kita selalu tambahkan $i diisi $i ditambah 1
+  }
+}
+
+// each
+$socials-colors: (
+  youtube: #ff0000,
+  facebook: #3b5988,
+  twitter: #1da1f2,
+);
+
+.socials {
+  font-size: 2em;
+  font-family: arial;
+  font-weight: bold;
+  @each $social, $color in $socials-colors {
+    .#{$social} {
+      color: $color;
+    }
+  }
+}

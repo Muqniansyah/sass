@@ -1,0 +1,74 @@
+// buit in modules/function adalah fungsi fungsi bawaan dari SASS
+// diantaranya yaitu: color,list,map,math,meta,selector,string.
+
+// built-in-modules untuk yang color
+$warna-dasar: salmon;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.grayscale,
+.mix,
+.fadeIn,
+.fadeOut {
+  color: $warna-dasar;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+// adjust-color()
+h1 {
+  color: adjust-color($color: $warna-dasar, $red: -50, $green: 100, $blue: 100, $hue: 0, $saturation: 0, $lightness: 0, $alpha: 0);
+}
+// adjust-hue($color, $degree) rumus: warnanya dan putar berapa derajat. adjust-hue ini bagian dari adjust-color.
+
+// complement($color) gunanya untuk mendapatkan warna complementernya. jika kita memberikan warna maka akan diberikan warna yang berlawanannya.
+
+h2 {
+  color: complement($warna-dasar);
+}
+
+// darken($color, $amount)
+h3 {
+  color: darken($warna-dasar, 20%);
+}
+
+// lighten($color, $amount)
+h4 {
+  color: lighten($warna-dasar, 10%);
+}
+
+// saturate($color, $amount) gunanya untuk nambahin warna
+h5 {
+  color: saturate($warna-dasar, 10%);
+}
+
+// desaturate($color, $amount) gunanya untuk menghilangkan warna
+h6 {
+  color: desaturate($warna-dasar, 50%);
+}
+
+// grayscale($color)
+.grayscale {
+  color: grayscale($warna-dasar);
+}
+
+// mix($color1, $color2, $weight: 50%) gunanya untuk mencampurkan warna. $weight adalah bobotnya yg secara default 50%.
+.mix {
+  color: mix($warna-dasar, blue, 80%);
+}
+
+// fadein($color, $amount) gunanya membuat elemen transparan jadi solid
+// untuk $amount nilainya dari 0 hingga 1
+.fadeIn {
+  color: fade-in(rgba(250, 128, 114, 0.2), 0.5);
+}
+
+// fadeout($color, $amount) gunanya membuat elemen solid jadi transparan
+// untuk $amount nilainya dari 0 hingga 1
+.fadeOut {
+  color: fade-out($warna-dasar, 0.4);
+}

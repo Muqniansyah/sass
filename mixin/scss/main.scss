@@ -1,0 +1,61 @@
+// membuat mixin dengan @mixin
+// nama dari @mixin bisa ditulis bebas
+// @include digunakan memanggil kumpulan dari style atau memanggil mixinnya.
+
+// contoh pertama penggunaan dari mixin
+@mixin inline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+.header ul {
+  // contoh cara panggil mixinnya
+  @include inline-list();
+  li {
+    background-color: black;
+    a {
+      color: white;
+    }
+  }
+}
+
+.footer ul {
+  // contoh cara panggil mixinnya
+  @include inline-list();
+  li {
+    background-color: salmon;
+    a {
+      color: white;
+    }
+  }
+}
+
+// contoh kedua penggunaan dari mixin dengan memakai argumen
+// kita bisa memberikan satu atau lebih argumen
+// pada argumen juga bisa memberikan nilai default. contohnya yaitu $direction: row, maka row adalah nilai default dari $direction. jika tanpa menuliskan nilai default,maka berikan $direction saja.
+@mixin flex-box($direction: row, $space: center) {
+  display: flex;
+  justify-content: $space;
+  align-items: center;
+  // disini flex-directionnya sesuai dengan argumen/parameter yang diberikan
+  flex-direction: $direction;
+}
+
+.container {
+  // pada saat memanngil mixinnya kita kirim parameternya yang berupa nilai dari flex-directionnya
+  @include flex-box(row-reverse, space-around);
+  width: 600px;
+  height: 400px;
+  background-color: #eaeaea;
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: #bada65;
+    text-align: center;
+    line-height: 60px;
+  }
+}
